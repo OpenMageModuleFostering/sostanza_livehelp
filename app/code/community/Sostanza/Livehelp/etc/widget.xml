@@ -91,7 +91,7 @@
                 <type>textarea</type>
 				<description>go to the<![CDATA[
                             <a target="_blank" href="http://server.livehelp.it/admin/default.asp?noarg">
-                            administrator panel</a>.
+                            dashboard</a>.
                ]]></description>
             </generatore>
         </parameters>

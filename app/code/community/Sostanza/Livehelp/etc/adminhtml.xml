@@ -11,12 +11,12 @@
                     <action>adminhtml/custom</action>
                 </index>
                 <list module="livehelp" translate="title">
-                    <title>Go to administator panel</title>
+                    <title>Dashboard</title>
                     <sort_order>2</sort_order>
                     <action>adminhtml/custom/list</action>
                 </list>
 				<chat module="livehelp" translate="title">
-                    <title>Go assisting!</title>
+                    <title>Agent's login</title>
                     <sort_order>3</sort_order>
                     <action>adminhtml/custom/chat</action>
                 </chat>
