@@ -1,23 +1,19 @@
 <?xml version="1.0"?>
 <package>
     <name>Sostanza_LiveHelp</name>
-    <version>1.6.2</version>
+    <version>1.6.3</version>
     <stability>stable</stability>
     <license>Open Software License (OSL)</license>
     <channel>community</channel>
     <extends/>
     <summary>Livehelp live chat support</summary>
     <description>LiveHelp&#xAE; is the customer care service in which the company operator answers to customers' and prospects' questions directly in a real-time chat.</description>
-    <notes>Choose the widget that will pop up on each type of your e-commerce pages:&#xD;
-- All: the chat widget will pop up on every page of the website&#xD;
-- Categories: the chat widget will pop up in the category listing  (i.e. apparel, shoes, accessories&#x2026;)&#xD;
-- Product: the chat widget will pop up on each product page&#xD;
-- Funnel: the chat widget will pop up in the cart and checkout pages&#xD;
-- Others: all the pages that aren't products,categories or funnel (like profile, wishlist)</notes>
+    <notes>- Added Magento v 1.9.3.3 compatibility&#xD;
+- Minor fixes</notes>
     <authors><author><name>a.laciura@sostanza.it</name><user>alaciura</user><email>a.laciura@sostanza.it</email></author></authors>
-    <date>2016-08-02</date>
-    <time>09:25:38</time>
-    <contents><target name="magecommunity"><dir name="Sostanza"><dir name="Livehelp"><dir name="Block"><dir name="Adminhtml"><dir name="Config"><dir name="Source"><file name="Buttons.php" hash="f451d7bd1d3407bde94d62e883e4ff03"/></dir></dir></dir><file name="Functions.php" hash="9cf7f675cad8fa2c65bf2e16aa5aa295"/></dir><dir name="Helper"><file name="Data.php" hash="350213592a87639adb3c550335b8bec6"/></dir><dir name="Model"><dir name="Config"><dir name="Source"><file name="GetCool.php" hash="4858dae16b90fb28bf274dca22568ef7"/></dir></dir></dir><dir name="controllers"><file name="IndexController.php" hash="c529ffdacdc549c46213a2d7c93692f3"/></dir><dir name="etc"><file name="adminhtml.xml" hash="de3981ba2172cc18f178e9e55c71232b"/><file name="config.xml" hash="8ec6e96750cf86b4bc060e60d4e906dc"/><file name="system.xml" hash="1ed781268acf23a15a0129a177fb863e"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="livehelp.xml" hash="4cada04c2d968e0721a69c5287678889"/></dir><dir name="template"><dir name="livehelp"><file name="widget.phtml" hash="8cafadff854e839595496b54f8131d68"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Sostanza_Livehelp.xml" hash="e233123489b59007400da8a42e60b0fa"/></dir></target></contents>
+    <date>2017-07-04</date>
+    <time>15:09:15</time>
+    <contents><target name="magecommunity"><dir name="Sostanza"><dir name="Livehelp"><dir name="Block"><dir name="Adminhtml"><dir name="Config"><dir name="Source"><file name="Buttons.php" hash="84cc11a51286c4fe508f0bc98fd38831"/></dir></dir></dir><file name="Functions.php" hash="c1529834c522b11344697036ba1f91fd"/></dir><dir name="Helper"><file name="Data.php" hash="350213592a87639adb3c550335b8bec6"/></dir><dir name="Model"><dir name="Config"><dir name="Source"><file name="GetCool.php" hash="e4a2da5e46e153cd1760aed9722fd9df"/></dir></dir></dir><dir name="controllers"><file name="IndexController.php" hash="c529ffdacdc549c46213a2d7c93692f3"/></dir><dir name="etc"><file name="adminhtml.xml" hash="de3981ba2172cc18f178e9e55c71232b"/><file name="config.xml" hash="f4b2ca89be79ed309abb329577698d4c"/><file name="system.xml" hash="6e5217672a81db71e1b6a50ea99ec4ad"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="livehelp.xml" hash="4cada04c2d968e0721a69c5287678889"/></dir><dir name="template"><dir name="livehelp"><file name="widget.phtml" hash="2d9186926512b3157e56341a68039db7"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Sostanza_Livehelp.xml" hash="9366bdd0be36a663753b5443e4ac96ac"/></dir></target></contents>
     <compatible/>
-    <dependencies><required><php><min>5.1.0</min><max>5.6.0</max></php></required></dependencies>
+    <dependencies><required><php><min>5.1.0</min><max>5.6.30</max></php></required></dependencies>
 </package>

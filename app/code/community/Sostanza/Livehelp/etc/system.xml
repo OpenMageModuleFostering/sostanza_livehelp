@@ -83,7 +83,7 @@
                             <label>Track your orders</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
-                             <comment>
+                            <comment>
                                 <![CDATA[Only for <b>business account</b>. ]]>
                             </comment>
                             <sort_order>3</sort_order>
@@ -91,9 +91,9 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </trackorder>
-                       
+
                         <filter module="livehelp" translate="label">
-                     
+
                             <label>All</label>
                             <frontend_type>select</frontend_type>
                             <source_model>livehelp/config_source_GetCool</source_model>
@@ -101,7 +101,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </filter>    
+                        </filter>
                         <viewGEN module="livehelp" translate="label">
                             <label>Others</label>
                             <frontend_type>select</frontend_type>
@@ -110,7 +110,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </viewGEN>    
+                        </viewGEN>
                         <viewCAT module="livehelp" translate="label">
                             <label>Categories</label>
                             <frontend_type>select</frontend_type>
@@ -119,7 +119,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </viewCAT> 	
+                        </viewCAT>
                         <viewPROD module="livehelp" translate="label">
                             <label>Product</label>
                             <frontend_type>select</frontend_type>
@@ -128,7 +128,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </viewPROD> 
+                        </viewPROD>
                         <viewFUNNEL module="livehelp" translate="label">
                             <label>Funnel</label>
                             <frontend_type>select</frontend_type>
@@ -137,7 +137,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </viewFUNNEL> 						
+                        </viewFUNNEL>
                     </fields>
                 </advancedconfig>
             </groups>
