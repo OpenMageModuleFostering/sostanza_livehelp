@@ -1,59 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
     <menu>
-        <mycustomtab module="livehelp" translate="title">
+        <livehelp module="livehelp" translate="title">
             <title>LiveHelp®</title>
             <sort_order>10000</sort_order>
             <children>
                 <index module="livehelp" translate="title">
-                    <title>Configure widget</title>
+                    <title>Configure plugin</title>
                     <sort_order>1</sort_order>
-                    <action>adminhtml/custom</action>
+                    <action>adminhtml/system_config/edit/section/livehelp</action>
                 </index>
-                <list module="livehelp" translate="title">
-                    <title>Dashboard</title>
-                    <sort_order>2</sort_order>
-                    <action>adminhtml/custom/list</action>
-                </list>
-				<chat module="livehelp" translate="title">
-                    <title>Agent's login</title>
-                    <sort_order>3</sort_order>
-                    <action>adminhtml/custom/chat</action>
-                </chat>
-				<about module="livehelp" translate="title">
-                    <title>About LiveHelp®</title>
-                    <sort_order>4</sort_order>
-                    <action>adminhtml/custom/about</action>
-                </about>
             </children>
-        </mycustomtab>
+        </livehelp>
     </menu>
     <acl>
         <resources>
-            <admin>
+            <admin>			
                 <children>
-                    <custom translate="title" module="livehelp">
-                        <title>My Controller</title>
-                        <sort_order>-100</sort_order>
+                    <sostanza_livehelp>
                         <children>
-                            <index translate="title">
-                                <title>Index Action</title>
-                                <sort_order>1</sort_order>
-                            </index>
-                            <list translate="title">
-                                <title>List Action</title>
-                                <sort_order>2</sort_order>
-                            </list>
-							<chat translate="title">
-                                <title>Chat Action</title>
-                                <sort_order>3</sort_order>
-                            </chat>
-							<about translate="title">
-                                <title>About Action</title>
-                                <sort_order>3</sort_order>
-                            </about>							
+                            <livehelp>
+                                <title>livehelp</title>
+                                <sort_order>50</sort_order>
+                            </livehelp>
+                        </children>    
+                    </sostanza_livehelp>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <livehelp>
+                                        <title>Sostanza livehelp</title>
+                                    </livehelp>
+                                </children>
+                            </config>
                         </children>
-                    </custom>
+                    </system>
                 </children>
             </admin>
         </resources>

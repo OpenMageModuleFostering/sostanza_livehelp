@@ -1,30 +1,42 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <config>
     <modules>
         <Sostanza_Livehelp>
-            <version>1.0.0</version>
-            <cache_lifetime>0</cache_lifetime>
+            <version>1.2.0</version>
         </Sostanza_Livehelp>
     </modules>
     <global>
-        <helpers>
-            <livehelp>
-                <class>Sostanza_Livehelp_Helper</class>
-            </livehelp>
-        </helpers>
         <blocks>
             <livehelp>
                 <class>Sostanza_Livehelp_Block</class>
             </livehelp>
         </blocks>
+        <helpers>
+            <livehelp>
+                <class>Sostanza_Livehelp_Helper</class>
+            </livehelp>
+        </helpers>
+        <models>
+            <livehelp>
+                <class>Sostanza_Livehelp_Model</class>
+            </livehelp>
+        </models>	
     </global>
+    <frontend>
+        <layout>
+            <updates>
+                <livehelp>
+                    <file>livehelp.xml</file>
+                </livehelp>
+            </updates>
+        </layout>
+    </frontend>
 	<admin>
         <routers>
             <adminhtml>
-				<use>admin</use>
                 <args>
                     <modules>
-                        <foo_bar before="Mage_Adminhtml">Sostanza_Livehelp_Adminhtml</foo_bar>
+                        <livehelp before="Mage_Adminhtml">Sostanza_Livehelp_Adminhtml</livehelp>
                     </modules>
                 </args>
             </adminhtml>
