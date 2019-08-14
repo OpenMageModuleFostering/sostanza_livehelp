@@ -67,21 +67,9 @@
                         <widget_method>2</widget_method>
                     </depends>
                     <comment>
-                        <![CDATA[If you have set a list of dynamic widget in <a href="http://server.livehelp.it" target=blank>Livehelp&reg; dashboard</a>, you can select one below]]>
+                        <![CDATA[If you have set a list of dynamic widget in <a href="http://server.livehelp.it" target=blank>Livehelp&reg; dashboard</a>, choose the widget that will pop up on each type of your e-commerce pages:<br>- <b>All</b>: the chat widget will pop up on every page of the website.<br>- <b>Categories</b>: the chat widget will pop up in the category listing  (i.e. apparel, shoes, accessories…).<br>- <b>Product</b>: the chat widget will pop up on each product page.<br>- <b>Funnel</b>: the chat widget will pop up in the cart and checkout pages.<br>- <b>Others</b>: all the pages that aren't products,categories or funnel.<br><br>If you would like the chat widget to appear through the whole website, just choose the widget for the ALL select and leave the others unselected.]]>
                     </comment>
                     <fields>
-                        <filter module="livehelp" translate="label comment">
-                            <label>Choose a dynamic js widget</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>livehelp/config_source_GetCool</source_model>
-                            <comment>
-                                <![CDATA[The list of your widgets. <b>Click "Save Config"</b> if you don't see any widget.]]>
-                            </comment>
-                            <sort_order>1</sort_order>
-                            <show_in_default>2</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </filter>
                         <cart module="livehelp" translate="label">
                             <label>Let agents view/edit cart details</label>
                             <frontend_type>select</frontend_type>
@@ -103,6 +91,53 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </trackorder>
+                       
+                        <filter module="livehelp" translate="label">
+                     
+                            <label>All</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>livehelp/config_source_GetCool</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </filter>    
+                        <viewGEN module="livehelp" translate="label">
+                            <label>Others</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>livehelp/config_source_GetCool</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </viewGEN>    
+                        <viewCAT module="livehelp" translate="label">
+                            <label>Categories</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>livehelp/config_source_GetCool</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </viewCAT> 	
+                        <viewPROD module="livehelp" translate="label">
+                            <label>Product</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>livehelp/config_source_GetCool</source_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </viewPROD> 
+                        <viewFUNNEL module="livehelp" translate="label">
+                            <label>Funnel</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>livehelp/config_source_GetCool</source_model>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </viewFUNNEL> 						
                     </fields>
                 </advancedconfig>
             </groups>

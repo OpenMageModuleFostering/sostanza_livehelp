@@ -4,7 +4,7 @@ class Sostanza_Livehelp_IndexController extends Mage_Core_Controller_Front_Actio
 {
  public function getcartlhinfoAction()
     {
-    		
+    	//se il controller è stato richiamato da Livehelp setta il cookie frontend e fa il redirect al carrello utente	
 	if(isset($_GET["LH_SID"]))
 	{		
 		
@@ -23,7 +23,9 @@ class Sostanza_Livehelp_IndexController extends Mage_Core_Controller_Front_Actio
 			
 		
 		$this->_redirectUrl($MAGENTOcart);
-	}else{
+	}
+	//altrimenti recupera la sessione utente da passare all'operatore
+	else{
 		$session_id = Mage::getSingleton("core/session")->getEncryptedSessionId(); // get our session
 		echo Mage::getUrl()."livehelp/index/getcartlhinfo/?LH_SID=".$session_id;
 	}	
