@@ -1,0 +1,119 @@
+<!--
+/**
+ * Sostanza LiveHelp® chat
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to info@sostanza.it so we can send you a copy immediately.
+ *
+ * @category    Sostanza
+ * @package     Sostanza_LiveHelp
+ * @copyright   Copyright 2014 Sostanza s.r.l (http://www.sostanza.it)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<widgets>
+   <livehelp_livehelp type="livehelp/livehelp" translate="name description" module="livehelp">
+        <name>LiveHelp® assistant</name>
+        <description>Add LiveHelp® to your website.</description>
+		<js></js>
+		<parameters>
+            <sostanza_livehelpID>
+                <label>LiveHelp® ID</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>text</type>
+                <description><![CDATA[
+                            <a target="_blank" href="http://www.livehelp.it/vedit/15/landing-page.asp?campagna=magento">
+                            create an account</a> and paste the LiveHelp® ID.
+               ]]></description>
+            </sostanza_livehelpID>
+			 <bottone>
+                <label>Choose the button</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>select</type>
+				<values>
+				<link translate="label">
+                        <value>link</value>
+                        <label>link</label>
+                    </link>
+                    <omino translate="label">
+                        <value>omino livehelp</value>
+                        <label>omino livehelp</label>
+                    </omino>
+					<rosso translate="label">
+                        <value>bottone rosso</value>
+                        <label>bottone rosso</label>
+                    </rosso>
+                    <ragazza translate="label">
+                        <value>bottone con ragazza</value>
+                        <label>bottone con ragazza</label>
+                    </ragazza>
+					<fumetto translate="label">
+                        <value>bottone con fumetto</value>
+                        <label>bottone con fumetto</label>
+                    </fumetto>
+					<fumetto_en translate="label">
+                        <value>bottone con fumetto en</value>
+                        <label>bottone con fumetto en</label>
+                    </fumetto_en>
+					<rosa translate="label">
+                        <value>bottone rosa</value>
+                        <label>bottone rosa</label>
+                    </rosa>
+					<grigio_verde translate="label">
+                        <value>bottone grigio-verde</value>
+                        <label>bottone grigio-verde</label>
+                    </grigio_verde>
+					<grigio_rosso translate="label">
+                        <value>bottone grigio-rosso</value>
+                        <label>bottone grigio-rosso</label>
+                    </grigio_rosso>
+				</values>
+				              <description>
+                            Choose the button to display on frontend
+                        </description>
+            </bottone>
+						 <posizione>
+                <label>Choose position</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>select</type>
+				<values>
+				<left translate="label">
+                        <value>bottom-left fixed</value>
+                        <label>bottom-left fixed</label>
+                    </left>
+                    <right translate="label">
+                        <value>bottom-right fixed</value>
+                        <label>bottom-right fixed</label>
+                    </right>
+					<inside translate="label">
+                        <value>inside</value>
+                        <label>inside</label>
+                    </inside>
+				</values>
+				              <description>
+                         Choose the position of the button.
+ </description>
+            </posizione>
+            <generatore>
+                <label>Paste the html code for advanced configuration</label>
+                <visible>1</visible>
+                <required>0</required>
+                <type>textarea</type>
+				<description>go to the<![CDATA[
+                            <a target="_blank" href="http://server.livehelp.it/admin/default.asp?noarg">
+                            administrator panel</a>.
+               ]]></description>
+            </generatore>
+        </parameters>
+    </livehelp_livehelp>
+</widgets>

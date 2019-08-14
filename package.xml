@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Sostanza_LiveHelp</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL-3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Sostanza LiveHelp&#xAE; chat support</summary>
+    <description>provide chat support for customers</description>
+    <notes>first release</notes>
+    <authors><author><name>Alessandro La Ciura</name><user>alaciura</user><email>a.laciura@sostanza.it</email></author></authors>
+    <date>2014-03-24</date>
+    <time>12:28:28</time>
+    <contents><target name="magecommunity"><dir name="Sostanza"><dir name="Livehelp"><dir name="Block"><file name="Livehelp.php" hash="07849f75773fb20b3a53fe041548cfb2"/></dir><dir name="Helper"><file name="Data.php" hash="98334f85f503ecce4828aa25feeba4ee"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="CustomController.php" hash="508fa358cd50297c24c8093e7fb2de69"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="8ad1b51a2bf6dbc235b6b7d9a3ab1b26"/><file name="config.xml" hash="54ba4b04924e260aa1d144a428c8a26d"/><file name="widget.xml" hash="ae08de33c7bb3c10715ea160a5ce7125"/></dir><file name=".DS_Store" hash="f41f525169d6272ff2c77dc5440285c6"/></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Sostanza_Livehelp.xml" hash="b1746da8a328bf3aada246bd68bee59b"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php><package><name>Mage_Core_Modules</name><channel>community</channel><min>1.7</min><max>1.8.1</max></package></required></dependencies>
+</package>
