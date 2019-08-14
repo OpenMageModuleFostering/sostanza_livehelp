@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <package>
     <name>Sostanza_LiveHelp</name>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <stability>stable</stability>
-    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL-3.0</license>
+    <license>OSL-3.0</license>
     <channel>community</channel>
     <extends/>
     <summary>Livehelp for chat support</summary>
-    <description>LiveHelp&amp;#xAE;  is the customer care service in which the company operator answers to customers' and prospects' questions directly in a real-time chat.</description>
-    <notes>Minor bug fix, added compatibility for CE 9</notes>
+    <description>LiveHelp&amp;amp;#xAE;  is the customer care service in which the company operator answers to customers' and prospects' questions directly in a real-time chat.</description>
+    <notes>Added english button</notes>
     <authors><author><name>Alessandro La Ciura</name><user>alaciura</user><email>a.laciura@sostanza.it</email></author></authors>
     <date>2014-09-05</date>
-    <time>10:34:38</time>
-    <contents><target name="magecommunity"><dir name="Sostanza"><dir name="Livehelp"><dir name="Block"><file name="Livehelp.php" hash="cc7dc337c7dcb488bc08107029d0041c"/></dir><dir name="Helper"><file name="Data.php" hash="98334f85f503ecce4828aa25feeba4ee"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="CustomController.php" hash="04447a1ff88085b8fcd32dd42d26223c"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="cbf52b8d3c14274c029097096f169e1b"/><file name="config.xml" hash="c245ef2a299a65440d97f2a514b60a7a"/><file name="widget.xml" hash="e011bdba9c38116690fd1edf4e9563e1"/></dir><file name="livehelp_magento_guide.pdf" hash="b78ca838407d7742be4e87b918a2ad20"/><file name=".DS_Store" hash="f41f525169d6272ff2c77dc5440285c6"/></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Sostanza_Livehelp.xml" hash="b1746da8a328bf3aada246bd68bee59b"/></dir></target></contents>
+    <time>12:32:09</time>
+    <contents><target name="magecommunity"><dir name="Sostanza"><dir name="Livehelp"><dir name="Block"><file name="Livehelp.php" hash="79d4087024c9e0f0e116cc9364a6755f"/></dir><dir name="Helper"><file name="Data.php" hash="98334f85f503ecce4828aa25feeba4ee"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="CustomController.php" hash="04447a1ff88085b8fcd32dd42d26223c"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="cbf52b8d3c14274c029097096f169e1b"/><file name="config.xml" hash="c245ef2a299a65440d97f2a514b60a7a"/><file name="widget.xml" hash="e011bdba9c38116690fd1edf4e9563e1"/></dir><file name="livehelp_magento_guide.pdf" hash="b78ca838407d7742be4e87b918a2ad20"/><file name=".DS_Store" hash="f41f525169d6272ff2c77dc5440285c6"/></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Sostanza_Livehelp.xml" hash="b1746da8a328bf3aada246bd68bee59b"/></dir></target></contents>
     <compatible/>
-    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+    <dependencies><required><php><min>5.0.0</min><max>6.0.0</max></php></required></dependencies>
 </package>
