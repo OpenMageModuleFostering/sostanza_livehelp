@@ -2,9 +2,9 @@
 <config>
     <tabs>
         <livehelp_config module="livehelp" translate="label">
-            <label>Livehelp®</label>
+            <label>Livehelp</label>
             <sort_order>1</sort_order>
-        </livehelp_config>    
+        </livehelp_config>
     </tabs>
     <sections>
         <livehelp translate="label" module="livehelp">
@@ -16,7 +16,7 @@
             <show_in_website>1</show_in_website>
             <show_in_store>1</show_in_store>
             <groups>
-				<buttons>
+                <buttons>
                     <frontend_model>livehelp/adminhtml_config_source_buttons</frontend_model>
                     <sort_order>0</sort_order>
                     <show_in_default>1</show_in_default>
@@ -32,7 +32,7 @@
                     <show_in_store>1</show_in_store>
                     <fields>
                         <active module="livehelp" translate="label">
-                            <label>Enable Livehelp®</label>
+                            <label>Enable Livehelp</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                             <sort_order>1</sort_order>
@@ -41,31 +41,23 @@
                             <show_in_store>1</show_in_store>
                         </active>
                         <lhid module="livehelp" translate="label">
-                            <label>Livehelp® ID</label>
+                            <label>Livehelp ID</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <comment><![CDATA[This is the  5 digit key found in your subscribe email. <b>Click "Save Config"</b> to update the widget configuration dropdown widgets.<br /> ]]>
+                            <comment>
+                                <![CDATA[This is the 5-digit key provided in your subscription email (without ID-). <b>Click "Save Config"</b> to update the widget  list.<br /> ]]>
                             </comment>
                             <depends>
                                 <active>1</active>
                             </depends>
-                        </lhid> 
-                        <method module="livehelp" translate="label">
-                            <label>I want to use the old easy way configuration</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>3</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </method>						
-                    </fields>                    
+                        </lhid>
+                    </fields>
                 </widget>
                 <advancedconfig module="livehelp" translate="label">
-                    <label>Widget Configuration: The new cool way</label>
+                    <label>Widget Configuration</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>20</sort_order>
                     <show_in_default>1</show_in_default>
@@ -74,19 +66,23 @@
                     <depends>
                         <widget_method>2</widget_method>
                     </depends>
-					<comment><![CDATA[If you have set a list of dynamic widget in <a href="http://server.livehelp.it" target=blank>Livehelp® dashboard</a>, you can select one below]]></comment>
-					<fields>
-						<filter module="livehelp" translate="label comment">
+                    <comment>
+                        <![CDATA[If you have set a list of dynamic widget in <a href="http://server.livehelp.it" target=blank>Livehelp&reg; dashboard</a>, you can select one below]]>
+                    </comment>
+                    <fields>
+                        <filter module="livehelp" translate="label comment">
                             <label>Choose a dynamic js widget</label>
                             <frontend_type>select</frontend_type>
                             <source_model>livehelp/config_source_GetCool</source_model>
-                            <comment><![CDATA[The list of your widgets. <b>Click "Save Config"</b> if you don't see any widget.]]></comment>
+                            <comment>
+                                <![CDATA[The list of your widgets. <b>Click "Save Config"</b> if you don't see any widget.]]>
+                            </comment>
                             <sort_order>1</sort_order>
                             <show_in_default>2</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </filter>
-						<cart module="livehelp" translate="label">
+                        <cart module="livehelp" translate="label">
                             <label>Let agents view/edit cart details</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
@@ -94,49 +90,21 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </cart>	
-						<trackorder module="livehelp" translate="label">
+                        </cart>
+                        <trackorder module="livehelp" translate="label">
                             <label>Track your orders</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
+                             <comment>
+                                <![CDATA[Only for <b>business account</b>. ]]>
+                            </comment>
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </trackorder>	                       
+                        </trackorder>
                     </fields>
-                </advancedconfig>				
-                <classicconfig module="livehelp" translate="label comment">
-                    <label>Widget Configuration: The old easy way</label>
-                    <frontend_type>text</frontend_type>
-                    <sort_order>30</sort_order>
-                    <show_in_default>2</show_in_default>
-                    <show_in_website>1</show_in_website>
-                    <show_in_store>1</show_in_store>
-                    <fields>
-						<button_live module="livehelp" translate="label comment">
-							<label>Choose a button</label>
-							<frontend_type>select</frontend_type>
-								<!-- scelgo il tipo di congifurazione-->
-							<source_model>livehelp/config_source_getLivehelpButton</source_model>
-							<comment><![CDATA[The image of the button.]]></comment>
-							<sort_order>1</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>1</show_in_website>
-							<show_in_store>1</show_in_store>
-                        </button_live>
-						<button_position module="livehelp" translate="label comment">
-                            <label>Position</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>livehelp/config_source_GetLivehelpPosition</source_model>
-                            <comment><![CDATA[The position in the page of the button.]]></comment>
-                            <sort_order>2</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store> 
-                        </button_position>			
-					</fields>   
-				</classicconfig>
+                </advancedconfig>
             </groups>
         </livehelp>
     </sections>

@@ -23,6 +23,15 @@
         </models>	
     </global>
     <frontend>
+		<routers>
+            <livehelp>
+                <use>standard</use>
+                <args>
+                    <module>Sostanza_Livehelp</module>
+                    <frontName>livehelp</frontName>
+                </args>
+            </livehelp>
+        </routers>
         <layout>
             <updates>
                 <livehelp>
@@ -40,6 +49,7 @@
                     </modules>
                 </args>
             </adminhtml>
+			
         </routers>
     </admin>
 </config>

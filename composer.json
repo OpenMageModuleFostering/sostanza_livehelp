@@ -1,12 +1,12 @@
 {
     "name": "OpenMageModuleFostering/Sostanza_LiveHelp",
     "type": "magento-module",
-    "license": "OSL-3.0",
+    "license": "Open-Software-License-(OSL)",
     "homepage": "",
-    "description": "Livehelp for chat support.",
+    "description": "Livehelp live chat support",
     "authors": [
     {
-        "name": "Alessandro La Ciura",
+        "name": "a.laciura@sostanza.it",
         "email": "a.laciura@sostanza.it"
     }
 ],

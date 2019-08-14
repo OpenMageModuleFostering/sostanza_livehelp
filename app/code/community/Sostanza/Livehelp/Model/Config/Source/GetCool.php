@@ -31,7 +31,6 @@ $resp = curl_exec($curl);
 
 curl_close($curl);
 $resp= substr_replace($resp ,"",-1);
-$resp="0=>Choose a widget...,".$resp;
 $asArr = explode(',', $resp);
 
 foreach( $asArr as $val ){
