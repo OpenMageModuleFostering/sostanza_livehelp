@@ -18,7 +18,7 @@
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 ?>
-<?
+<?php
 class Sostanza_Livehelp_Block_Livehelp extends Mage_Core_Block_Abstract implements Mage_Widget_Block_Interface
 {
 
