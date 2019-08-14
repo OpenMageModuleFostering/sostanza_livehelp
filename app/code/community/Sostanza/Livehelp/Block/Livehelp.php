@@ -65,6 +65,23 @@ protected function _toHtml()
 			case 'bottone grigio-rosso':
 			$href = "<A HREF='#' OnClick='apri_livehelp(); return(false);'><img border='0' src='http://server.livehelp.it/admin/logo_livehelp.asp?bottone=10&gruppo=".$ID."&stanza='></A>";
 			break;
+			
+			case'bottone rosso EN':
+			$href = "<A HREF='#' OnClick='apri_livehelp(); return(false);'><img border='0' src='http://server.livehelp.it/admin/logo_livehelp.asp?bottone=17&gruppo=".$ID."&stanza='></A>";
+			
+			case'bottone grigio verde EN':
+			$href = "<A HREF='#' OnClick='apri_livehelp(); return(false);'><img border='0' src='http://server.livehelp.it/admin/logo_livehelp.asp?bottone=14&gruppo=".$ID."&stanza='></A>";
+			
+			case 'bottone grigio rosso EN':
+			$href = "<A HREF='#' OnClick='apri_livehelp(); return(false);'><img border='0' src='http://server.livehelp.it/admin/logo_livehelp.asp?bottone=20&gruppo=".$ID."&stanza='></A>";
+			
+			case 'bottone con ragazza green':
+			$href = "<A HREF='#' OnClick='apri_livehelp(); return(false);'><img border='0' src='http://server.livehelp.it/admin/logo_livehelp.asp?bottone=18&gruppo=".$ID."&stanza='></A>";
+			case 'bottone con ragazza red':
+			$href = "<A HREF='#' OnClick='apri_livehelp(); return(false);'><img border='0' src='http://server.livehelp.it/admin/logo_livehelp.asp?bottone=19&gruppo=".$ID."&stanza='></A>";
+			case 'non perdere tempo EN':
+			$href = "<A HREF='#' OnClick='apri_livehelp(); return(false);'><img border='0' src='http://server.livehelp.it/admin/logo_livehelp.asp?bottone=15&gruppo=".$ID."&stanza='></A>";
+		
 			}
 			
 			switch ($posizione) 

@@ -56,6 +56,30 @@
                         <value>bottone grigio-rosso</value>
                         <label>bottone grigio-rosso</label>
                     </grigio_rosso>
+										<bottone_rosso_EN translate="label">
+                        <value>bottone rosso EN</value>
+                        <label>bottone rosso EN</label>
+                    </bottone_rosso_EN>
+										<bottone_grigio_verde_EN translate="label">
+                        <value>bottone grigio verde EN</value>
+                        <label>bottone grigio verde EN</label>
+                    </bottone_grigio_verde_EN>
+										<bottone_grigio_rosso_EN translate="label">
+                        <value>bottone grigio rosso EN</value>
+                        <label>bottone grigio rosso EN</label>
+                    </bottone_grigio_rosso_EN>
+										<bottone_con_ragazza_green translate="label">
+                        <value>bottone con ragazza green</value>
+                        <label>bottone con ragazza green</label>
+                    </bottone_con_ragazza_green>
+										<bottone_con_ragazza_red translate="label">
+                        <value>bottone con ragazza red</value>
+                        <label>bottone con ragazza red</label>
+                    </bottone_con_ragazza_red>
+															<non_perdere_tempo_EN translate="label">
+                        <value>non perdere tempo EN</value>
+                        <label>non perdere tempo EN</label>
+                    </non_perdere_tempo_EN>
 				</values>
 				              <description>
                             Choose the button to display on frontend
