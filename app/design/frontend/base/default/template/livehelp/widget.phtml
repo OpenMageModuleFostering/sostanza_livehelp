@@ -1,12 +1,15 @@
 <?php
-if ($this->isActive()){
-    if ($this->isCool()){
+//get the page
+$success= Mage::app()->getRequest()->getActionName();
 
-?>       
+//se è attivo
+if ($this->isActive()){
+	//se uso il vecchio metodo
+    if ($this->isCool()){?>       
 
 		<!-- Start LiveHelp Code Copyright 1997 - 2015 www.livehelp.it Sostanza srl  -->        
-		<SCRIPT language=javascript> function apri_livehelp() {var d=new Date(); nuovo_LiveHelp_<?php  echo $this->getLivehelpID(); ?>=window.open('http://server.livehelp.it/client_user_resp/?provenienza='+ escape(document.location.href) +'&info=&template=10314&stanza=&ID=<?php echo $this->getLivehelpID(); ?>&gruppo=Assistenza&nick=&x=' + d.valueOf(),'LiveHelpwin1_<?php echo $this->getLivehelpID(); ?>', 'status=no,location=no,toolbar=no,width=600,height=465,resizable=yes'); nuovo_LiveHelp_<?php echo $this->getLivehelpID(); ?>.focus();} </SCRIPT>        
-<?php
+		<SCRIPT language=javascript> function apri_livehelp() {var d=new Date(); nuovo_LiveHelp_<?php  echo $this->getLivehelpID(); ?>=window.open('http://server.livehelp.it/client_user_http/?provenienza='+ escape(document.location.href) +'&info=&template=10281&stanza=&ID=<?php echo $this->getLivehelpID(); ?>&gruppo=Assistenza&nick=&x=' + d.valueOf(),'LiveHelpwin1_<?php echo $this->getLivehelpID(); ?>', 'status=no,location=no,toolbar=no,width=600,height=465,resizable=yes'); nuovo_LiveHelp_<?php echo $this->getLivehelpID(); ?>.focus();} </SCRIPT>        
+	<?php
         if ($this->getPosition() != "0"){
 			if ($this->getPosition() == "1"){
 				$span = "<span  id='LH2013'>";
@@ -20,22 +23,34 @@ if ($this->isActive()){
 			echo $span;?>
 			<A HREF="#" OnClick="apri_livehelp(); return(false);"><img border="0" src="http://server.livehelp.it/admin/logo_livehelp.asp?bottone=<?php echo $this->getButton(); ?>&gruppo=<?php echo $this->getLivehelpID(); ?>&stanza="></A></span>        
 			<!-- End LiveHelp code -->    
-		<?php }?>
- <?php
+		<?php }
     }else{
-	
+		//uso il nuovo metodo
 	    if ($this->getDynamic()!="0"){
-?>      
- <!-- Start LiveHelp activation widget - http://www.livehelp.it -->       
-		 <script type="text/javascript">        
-		 function LHready(){if(document.readyState == "complete"){(function(){ var lh=document.createElement("script");
-		 lh.type="text/javascript"; lh.async=true;
-		 lh.src="//server.livehelp.it/widgetjs/<?php echo $this->getLivehelpID(); ?>/<?php echo $this->getDynamic(); ?>.js?x=" + 1*new Date();
-		 var node=document.getElementsByTagName("script")[0];
-		 node.parentNode.insertBefore(lh,node);
-		 })();} else {setTimeout('LHready()',150);}} LHready();
+			$MAGENTOcart="";
+			
+			//vuole vedere cosa c'è nel carrello o l'id dell'utente se loggato
+			if ($this->getCart()!="0"){			
+				$MAGENTOcart=$this->getCartLHInfo();			
+			}
+			
+			//voglio tracciare gli ordini conclusi grazie alla chat
+			if ($this->trackOrder()!="0"){
+				if ($success=="success"){
+					echo $this->trackCustomerOrder();						
+				}			
+			}?>      
+			<!-- Start LiveHelp activation widget - http://www.livehelp.it -->       
+		 <script type="text/javascript"> 
+			var LHinfo='<?php echo $MAGENTOcart ?>';		 
+			function LHready(){if(document.readyState == "complete"){(function(){ var lh=document.createElement("script");
+			lh.type="text/javascript"; lh.async=true;
+			lh.src="//server.livehelp.it/widgetjs/<?php echo $this->getLivehelpID(); ?>/<?php echo $this->getDynamic(); ?>.js?x=" + 1*new Date();
+			var node=document.getElementsByTagName("script")[0];
+			node.parentNode.insertBefore(lh,node);
+			})();} else {setTimeout('LHready()',150);}} LHready();
 		 </script>          
-<?php
+		<?php
 		}
-   }
+	}
 }?>

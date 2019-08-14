@@ -54,7 +54,7 @@
                             </depends>
                         </lhid> 
                         <method module="livehelp" translate="label">
-                            <label>I want to use the easy way configuration</label>
+                            <label>I want to use the old easy way configuration</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                             <sort_order>3</sort_order>
@@ -74,19 +74,36 @@
                     <depends>
                         <widget_method>2</widget_method>
                     </depends>
-					<comment><![CDATA[If you have set a list of dinamic widget in <a href="http://server.livehelp.it" target=blank>Livehelp® dashboard</a>, you can select one below]]></comment>
+					<comment><![CDATA[If you have set a list of dynamic widget in <a href="http://server.livehelp.it" target=blank>Livehelp® dashboard</a>, you can select one below]]></comment>
 					<fields>
 						<filter module="livehelp" translate="label comment">
                             <label>Choose a dynamic js widget</label>
                             <frontend_type>select</frontend_type>
                             <source_model>livehelp/config_source_GetCool</source_model>
                             <comment><![CDATA[The list of your widgets. <b>Click "Save Config"</b> if you don't see any widget.]]></comment>
-                            <sort_order>3</sort_order>
+                            <sort_order>1</sort_order>
                             <show_in_default>2</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </filter>
-                       
+						<cart module="livehelp" translate="label">
+                            <label>Let agents view/edit cart details</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cart>	
+						<trackorder module="livehelp" translate="label">
+                            <label>Track your orders</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </trackorder>	                       
                     </fields>
                 </advancedconfig>				
                 <classicconfig module="livehelp" translate="label comment">

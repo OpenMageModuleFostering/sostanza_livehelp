@@ -7,6 +7,9 @@ class Sostanza_Livehelp_Block_Functions extends Mage_Core_Block_Template
     protected $_dynamic = false;
     protected $_button = false;
     protected $_position = false;
+    protected $_cart = false;
+    protected $_trackorder = false;
+    protected $LHinfo = false;
 	
     public function isActive()
     {
@@ -48,5 +51,67 @@ class Sostanza_Livehelp_Block_Functions extends Mage_Core_Block_Template
             $this->_dynamic = Mage::getStoreConfig('livehelp/advancedconfig/filter');
         return $this->_dynamic;
     }
-    
+     public function getCart()
+    {
+        if ($this->_cart === false)
+            $this->_cart = Mage::getStoreConfig('livehelp/advancedconfig/cart');
+        return $this->_cart;
+    } 
+     public function trackOrder()
+    {
+        if ($this->_trackorder === false)
+            $this->_trackorder = Mage::getStoreConfig('livehelp/advancedconfig/trackorder');
+        return $this->_trackorder;
+    } 	   
+	
+	public function getCartLHInfo()
+    {
+		$cliente=Mage::getSingleton('customer/session')->getCustomer()->getId();
+	
+		//se è guest mostro i prodotti nel carrello
+		if (!isset($cliente)){
+		
+			//se non si vuole passare il carrello all'operatore cambiare la riga sopra in:
+			//$LHinfo="Guest";  
+			$session_id = Mage::getSingleton("core/session")->getEncryptedSessionId(); // get our session		
+			$MAGENTOcart=Mage::getUrl( 'checkout/cart/', array(
+			'_query' => array('SID' => $session_id ), //make sure we append our session
+			'_store_to_url' => true ) ); // lastly add store to our url if needed
+		}
+		//altrimenti passo id utente
+		else{
+			$session_id = Mage::getSingleton("core/session")->getEncryptedSessionId(); // get our session				
+			$MAGENTOcart=Mage::getUrl( 'customer/account/', array(
+			'_query' => array('SID' => $session_id ), //make sure we append our session
+			'_store_to_url' => true ) ); // lastly add store to our url if needed
+			
+		}
+	
+		$count = $this->helper('checkout/cart')->getSummaryCount();
+		$total = $this->helper('checkout/cart')->getQuote()->getGrandTotal();
+		
+		if($count!=0){
+			return "Totale:".$total." "."Item:".$count." ".$MAGENTOcart;
+			}else{
+			return $MAGENTOcart;	
+		}
 }
+	public function trackCustomerOrder(){
+		$sOrderId = Mage::getSingleton('checkout/session')->getLastOrderId();
+		$oOrder = Mage::getModel('sales/order')->load($sOrderId);
+		$TOTorder=$oOrder->getGrandTotal();
+		$TOTorder=number_format((float)$TOTorder, 2, '.', '');
+		$nordine=$oOrder->getIncrementId();?>
+		<script>	
+		//track ordine livehelp
+		totale="<?php echo $TOTorder ?>";
+		LHamount=totale.replace('.','');
+		LHamount=LHamount.replace(',','');
+		LHorderID='<?php echo $nordine ?>';
+
+		document.write('<iframe src="//server.livehelp.it/admin/resa_livehelp.asp?gruppo=<?php echo $this->getLivehelpID(); ?>&amount=' + LHamount + '&orderID=' + LHorderID + '" height="0" width="0" style="display:none;visibility:hidden"></iframe>');
+		</script>
+<?php 
+	} 	
+}
+?>
