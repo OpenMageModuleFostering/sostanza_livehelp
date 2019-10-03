@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Sostanza_LiveHelp",
+    "name": "openmage-module-fostering\/sostanza_livehelp",
     "type": "magento-module",
-    "license": "Open-Software-License-(OSL)",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Livehelp live chat support",
     "authors": [
