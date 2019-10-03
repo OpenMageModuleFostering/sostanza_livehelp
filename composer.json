@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Sostanza_LiveHelp",
+    "name": "OpenMageModuleFostering\/Sostanza_LiveHelp",
     "type": "magento-module",
     "license": "Open-Software-License-(OSL)",
     "homepage": "",
     "description": "Livehelp live chat support",
     "authors": [
-    {
-        "name": "a.laciura@sostanza.it",
-        "email": "a.laciura@sostanza.it"
-    }
-],
+        {
+            "name": "a.laciura@sostanza.it",
+            "email": "a.laciura@sostanza.it"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
